@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import data from "../data/data";
 import Stockdisplay from "./Stockdisplay";
+import {Link} from "react-router-dom";
 
 export default function Dashboard() {
   const [stocks, setStocks] = useState(null);
@@ -23,7 +24,9 @@ export default function Dashboard() {
           </thead>
           <tbody>
             {stocks.map((stock) => (
+              
               <Stockdisplay stock={stock} key={stock.symbol} />
+             
             ))}
           </tbody>
         </table>
